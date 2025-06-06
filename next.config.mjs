@@ -1,18 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/licenta", // dacă vrei să fie accesibil pe https://username.github.io/repo
+  basePath: "/licenta", // numele repo-ului tău, cu slash la început
+  assetPrefix: "/licenta/", // important pentru stiluri și resurse
   images: {
-    unoptimized: true, // important pt export static
+    unoptimized: true, // necesar pentru export static cu imagini
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
   },
 };
 
